@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../script/CarboneScript.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../styles/Carbon.css">
+    <title>Empreinte Carbone</title>
+</head>
+<body>
+    <header>
+        <h1>Mon Empreinte Carbone</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="indexBG.html">Calculer mon CO2</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="titreX">
+        <h2>Selectionnez les catégories à calculer</h2>
+        <h2>Transport</h2>
+        <article id="carboneX">
+            <select id="modtransport">
+                <option value="metro">Metro</option>
+                <option value="bus">Bus</option>
+                <option value="velo">Velo</option>
+                <option value="pied">Marche à pied</option>
+            </select>
+            <label>Nombre de trajet par semaine : </label>
+            <input type="number" id="nbrtrajet" value="1">
+            <label>Nombre de Km par trajet :</label>
+            <input type="number" id="nbrkm">
+        </article>
+        <h2>Repas</h2>
+        <article id="repasX">
+            <label for="typeRepas">Type de repas :</label>
+            <select id="typeRepas">
+                <option value="poissonGras">Poisson Gras</option>
+                <option value="poissonBlanc">Poisson Blanc</option>
+                <option value="poulet">Poulet</option>
+                <option value="vegetarien">Végétarien</option>
+            </select>
+            <label for="nbrRepas">Nombre de repas par semaine :</label>
+            <input type="number" id="nbrRepas" value="1">
+        </article>
+        <h2>Électroménagers</h2>
+        <article id="electromenagerX">
+            <select id="typeElectromenager">
+                <option value="bouilloire">Bouilloire</option>
+                <option value="aspirateur">Aspirateur</option>
+                <option value="cafetiereFiltre">Cafetière Filtre</option>
+                <option value="fourElectrique">Four Électrique</option>
+                <option value="climatisateur">Climatiseur</option>
+                <option value="laveVaisselle">Lave-vaisselle</option>
+                <option value="laveLinge7g">Lave-linge 7 kg</option>
+            </select>
+            <label>Nombre d'utilisations par semaine :</label>
+            <input type="number" id="nbrUtilisations">
+        </article>
+        <h2>Objets Numériques</h2>
+        <article id="objetNumeriqueX">
+            <select id="typeObjetNumerique">
+                <option value="enceinteBluetooth">Enceinte Bluetooth</option>
+                <option value="montreConnectee">Montre Connectée</option>
+                <option value="imprimanteJetEncre">Imprimante Jet d'Encre</option>
+                <option value="ordinateurPortable">Ordinateur Portable</option>
+                <option value="ordinateurFixeBureau">Ordinateur Fixe de Bureau</option>
+                <option value="ecran24Pouces">Écran 24 Pouces</option>
+                <option value="television40_49Pouces">Télévision 40 - 49 Pouces</option>
+                <option value="smartphone5_5p">Smartphone >5.5 Pouces</option>
+                <option value="tablette">Tablette</option>
+            </select>
+            <label>Nombre d'heures d'utilisation par semaine :</label>
+            <input type="number" id="nbrHeuresUtilisationObjetNumerique" step="0.1">
+        </article>
+        <h2>Fruits</h2>
+        <article id="fruitsX">
+            <select id="typeFruit">
+                <option value="ananas">Ananas</option>
+                <option value="banane">Banane</option>
+                <option value="fruitPassion">Fruit de la Passion</option>
+                <option value="mangue">Mangue</option>
+                <option value="pomme">Pomme</option>
+                <option value="pamplemousse">Pamplemousse</option>
+            </select>
+            <label>Quantité consommée par semaine (en kg) :</label>
+            <input type="number" id="quantiteFruit" step="0.01">
+        </article>
+        <h2>Légumes</h2>
+        <article id="legumesX">
+            <select id="typeLegume">
+                <option value="asperge">Asperge</option>
+                <option value="avocat">Avocat</option>
+                <option value="champignonParis">Champignon de Paris</option>
+                <option value="cresson">Cresson</option>
+                <option value="endive">Endive</option>
+                <option value="epinard">Épinard</option>
+                <option value="fenouil">Fenouil</option>
+                <option value="navet">Navet</option>
+                <option value="oignon">Oignon</option>
+            </select>
+            <label>Quantité consommée par semaine (en kg) :</label>
+            <input type="number" id="quantiteLegume" step="0.01">
+        </article>
+        <h2>
+            <button id="getresult">Calculer</button>
+            <section id="res"></section>
+        </h2>
+        <canvas id="carboneChart" width="400" height="200"></canvas>
+    </div>
+</body>
+</html>
